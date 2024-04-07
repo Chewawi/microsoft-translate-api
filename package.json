@@ -1,0 +1,28 @@
+{
+  "name": "microsoft-translate-api",
+  "version": "0.0.1",
+  "description": "A simple, powerful and free API for Microsoft Translator for Node.js",
+  "main": "dist/index.js",
+  "typings": "index.d.ts",
+  "keywords": [
+    "bing",
+    "microsoft",
+    "translator",
+    "api",
+    "javascript",
+    "free",
+    "node",
+    "translate",
+    "azure"
+  ],
+  "files": [
+    "src",
+    "test",
+    "index.d.ts"
+  ],
+  "author": "Chewawi",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.12.5"
+  }
+}
