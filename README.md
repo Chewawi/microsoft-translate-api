@@ -24,9 +24,9 @@ $ bun install microsoft-translate-api
 #### From Auto-Detected Language to Another Language
 
 ```javascript
-const { MET } = require('microsoft-translate-api')
+const { translate } = require('microsoft-translate-api')
 
-MET.translate('你好，很高兴认识你！', null, 'en').then(res => {
+translate('你好，很高兴认识你！', null, 'en').then(res => {
   console.log(res);
 }).catch(err => {
   console.error(err);
@@ -57,9 +57,9 @@ MET.translate('你好，很高兴认识你！', null, 'en').then(res => {
 #### From Auto-Detected Language to Multiple Languages
 
 ```javascript
-const { MET } = require('microsoft-translate-api')
+const { translate } = require('microsoft-translate-api')
 
-MET.translate('你好，很高兴认识你！', null, ['en', 'ja']).then(res => {
+translate('你好，很高兴认识你！', null, ['en', 'ja']).then(res => {
   console.log(res);
 }).catch(err => {
   console.error(err);

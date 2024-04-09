@@ -1,8 +1,8 @@
 {
   "name": "microsoft-translate-api",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "A simple, powerful and free API for Microsoft Translator for Node.js",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "typings": "index.d.ts",
   "keywords": [
     "bing",
@@ -16,8 +16,8 @@
     "azure"
   ],
   "files": [
-    "src",
-    "test",
+    "dist",
+    "index.test.js",
     "index.d.ts"
   ],
   "author": "Chewawi",
