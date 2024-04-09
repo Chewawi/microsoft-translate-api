@@ -4,10 +4,42 @@ import * as lang from "./lang";
 const API_AUTH = "https://edge.microsoft.com/translate/auth";
 const API_TRANSLATE = "https://api.cognitive.microsofttranslator.com/translate";
 
+export type Nullable<T> = T | undefined | null;
+
+export interface TranslateOptions {
+  translateOptions?: Record<string, any>;
+  authenticationHeaders?: Record<string, string>;
+  userAgent?: string;
+  fetchOptions?: RequestInit;
+}
+
+/**
+ * See https://learn.microsoft.com/azure/ai-services/translator/reference/v3-0-translate#response-body for full result structure
+ */
+export interface TranslationResult {
+  translations: {
+    text: string;
+    to: string;
+    sentLen?: {
+      srcSentLen: number[];
+      transSentLen: number[];
+    };
+    transliteration?: {
+      script: string;
+      text: string;
+    };
+    alignment?: object;
+  }[];
+  detectedLanguage?: {
+    language: string;
+    score: number;
+  };
+}
+
 /**
  * Interface representing the global configuration containing the authentication token and its expiration time.
  */
-interface GlobalConfig {
+export interface GlobalConfig {
   token: string;
   tokenExpiresAt: number;
 }
@@ -63,7 +95,7 @@ function isTokenExpired(): boolean {
  */
 async function translate(
   text: string | string[],
-  from: string | null | undefined,
+  from: Nullable<string>,
   to: string | string[],
   options?: TranslateOptions
 ): Promise<TranslationResult[] | undefined> {

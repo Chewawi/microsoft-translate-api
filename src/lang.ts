@@ -1,3 +1,4 @@
+import { Nullable } from ".";
 import _langs from "./lang.json";
 
 /**
@@ -17,7 +18,7 @@ let LANGS: LangCodes = _langs;
  * @param lang The language to get the code for.
  * @returns The standardized language code if found, otherwise undefined.
  */
-function getLangCode(lang: string | null | undefined): string | undefined {
+function getLangCode(lang: Nullable<string>): string | undefined {
   if (!lang || typeof lang !== "string") {
     return;
   }
@@ -47,4 +48,4 @@ function isSupported(lang: string): boolean {
   return !!getLangCode(lang);
 }
 
-export { LANGS, getLangCode, isSupported };
+export { getLangCode, isSupported, LANGS };

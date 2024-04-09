@@ -76,3 +76,5 @@ sw.*
 bun.lockb
 
 dist/
+
+.husky
