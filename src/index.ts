@@ -1,4 +1,4 @@
-import { userAgent as DEFAULT_USER_AGENT } from "./config.json";
+import { userAgent as DEFAULT_USER_AGENT } from "./lib/config";
 import * as lang from "./lang";
 
 const API_AUTH = "https://edge.microsoft.com/translate/auth";

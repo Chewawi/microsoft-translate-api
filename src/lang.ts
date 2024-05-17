@@ -1,5 +1,5 @@
 import { Nullable } from ".";
-import _langs from "./lang.json";
+import _langs from "./lib/langs";
 
 /**
  * Interface representing language codes.
