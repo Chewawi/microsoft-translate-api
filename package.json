@@ -5,6 +5,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "pnpm build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Chewawi/microsoft-translate-api.git"
@@ -30,7 +34,8 @@
     "url": "https://github.com/Chewawi/microsoft-translate-api/issues"
   },
   "homepage": "https://github.com/Chewawi/microsoft-translate-api",
-  "dependencies": {
-    "@types/node": "^20.12.5"
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
   }
 }

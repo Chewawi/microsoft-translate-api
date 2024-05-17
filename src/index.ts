@@ -52,7 +52,7 @@ let globalConfigPromise: Promise<GlobalConfig | void> | undefined;
  * @param userAgent Optional user agent string.
  * @returns A promise that resolves with the global configuration or void if an error occurs.
  */
-async function fetchGlobalConfig(
+export async function fetchGlobalConfig(
   userAgent?: string
 ): Promise<GlobalConfig | void> {
   try {
@@ -79,7 +79,7 @@ async function fetchGlobalConfig(
  * Checks if the authentication token is expired.
  * @returns True if the token is expired, otherwise false.
  */
-function isTokenExpired(): boolean {
+export function isTokenExpired(): boolean {
   return (
     !globalConfig || (globalConfig.tokenExpiresAt || 0) - Date.now() < 60000
   );
@@ -93,7 +93,7 @@ function isTokenExpired(): boolean {
  * @param options Optional translate options.
  * @returns A promise that resolves with the translated text or undefined if an error occurs.
  */
-async function translate(
+export async function translate(
   text: string | string[],
   from: Nullable<string>,
   to: string | string[],
@@ -180,7 +180,7 @@ async function translate(
  * Ensures authentication by fetching the global configuration if necessary.
  * @param options Optional translate options.
  */
-async function ensureAuthentication(options?: TranslateOptions) {
+export async function ensureAuthentication(options?: TranslateOptions) {
   if (!options || !options.authenticationHeaders) {
     if (!globalConfigPromise) {
       globalConfigPromise = fetchGlobalConfig(options?.userAgent);
@@ -200,7 +200,7 @@ async function ensureAuthentication(options?: TranslateOptions) {
  * @param options Optional translate options.
  * @returns Request headers.
  */
-function buildHeaders(options?: TranslateOptions) {
+export function buildHeaders(options?: TranslateOptions) {
   const headers: Record<string, string | any> = {
     "User-Agent": DEFAULT_USER_AGENT,
     "Content-Type": "application/json",
@@ -219,4 +219,4 @@ function buildHeaders(options?: TranslateOptions) {
   return headers;
 }
 
-export { lang, translate };
+export * from "./lang";
