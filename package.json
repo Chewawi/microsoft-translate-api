@@ -2,11 +2,18 @@
   "name": "microsoft-translate-api",
   "version": "0.0.6",
   "description": "A simple, powerful and free API for Microsoft Translator for Node.js",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
-    "build": "tsc",
+    "build": "unbuild",
     "prepack": "pnpm build"
   },
   "repository": {
@@ -24,10 +31,6 @@
     "translate",
     "azure"
   ],
-  "files": [
-    "dist",
-    "typings.d.ts"
-  ],
   "author": "Chewawi",
   "license": "MIT",
   "bugs": {
@@ -36,6 +39,7 @@
   "homepage": "https://github.com/Chewawi/microsoft-translate-api",
   "devDependencies": {
     "@types/node": "^20.12.12",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0"
   }
 }
