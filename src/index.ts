@@ -1,5 +1,5 @@
-import { userAgent as DEFAULT_USER_AGENT } from "./lib/config";
 import * as lang from "./lang";
+import { userAgent as DEFAULT_USER_AGENT } from "./lib/config";
 
 const API_AUTH = "https://edge.microsoft.com/translate/auth";
 const API_TRANSLATE = "https://api.cognitive.microsofttranslator.com/translate";
@@ -220,3 +220,4 @@ export function buildHeaders(options?: TranslateOptions) {
 }
 
 export * from "./lang";
+export * as langs from "./lib/langs";

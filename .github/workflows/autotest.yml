@@ -9,7 +9,7 @@ on:
 
 jobs:
   autotest:
-    if: ${{ github.repository_owner == 'Chewawu' }}
+    if: ${{ github.repository_owner == 'Chewawi' }}
     runs-on: ubuntu-latest
 
     steps:

@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/Chewawi/microsoft-translate-api",
   "devDependencies": {
+    "@types/bun": "^1.1.2",
     "@types/node": "^20.12.12",
     "typescript": "^5.4.5",
     "unbuild": "^2.0.0"

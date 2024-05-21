@@ -76,3 +76,4 @@ sw.*
 bun.lockb
 
 dist/
+test/
