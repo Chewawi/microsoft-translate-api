@@ -1,5 +1,5 @@
 import { test } from "bun:test";
-import { translate } from "..";
+import { translate } from "../src/index";
 
 test("translate", async () => {
   const res = await translate("Hello World!", null, "Chinese (Literary)");
