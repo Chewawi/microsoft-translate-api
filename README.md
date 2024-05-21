@@ -2,6 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/microsoft-translate-api.svg?style=flat)](https://www.npmjs.org/package/microsoft-translate-api)
 [![Auto Test](https://github.com/chewawi/microsoft-translate-api/actions/workflows/autotest.yml/badge.svg)](https://github.com/chewawi/microsoft-translate-api/actions/workflows/autotest.yml)
+[![Build](https://github.com/chewawi/microsoft-translate-api/actions/workflows/transpile.yml/badge.svg)](https://github.com/chewawi/microsoft-translate-api/actions/workflows/transpile.yml)
 [![NPM Downloads](https://img.shields.io/npm/dm/microsoft-translate-api.svg)](https://npmcharts.com/compare/microsoft-translate-api?minimal=true)
 [![License](https://img.shields.io/npm/l/microsoft-translate-api.svg)](https://github.com/tuusuario/microsoft-translate-api/blob/master/LICENSE)
 
