@@ -1,5 +1,5 @@
 import { test } from "bun:test";
-import { translate } from "microsoft-translate-api";
+import { translate } from "..";
 
 test("translate", async () => {
   const res = await translate("Hello World!", null, "Chinese (Literary)");
