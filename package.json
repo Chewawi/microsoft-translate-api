@@ -14,6 +14,7 @@
   "files": ["dist"],
   "scripts": {
     "build": "unbuild",
+    "prepare": "pnpm build",
     "prepack": "pnpm build"
   },
   "repository": {
@@ -24,8 +25,10 @@
     "bing",
     "microsoft",
     "translator",
+    "trans",
     "api",
     "javascript",
+    "typescript",
     "free",
     "node",
     "translate",
