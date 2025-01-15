@@ -15,9 +15,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "pnpm generate:langs && unbuild",
     "prepare": "pnpm build",
-    "prepack": "pnpm build"
+    "prepack": "pnpm build",
+    "generate:langs": "node scripts/generate-langs.js"
   },
   "repository": {
     "type": "git",
