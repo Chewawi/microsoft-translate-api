@@ -12,14 +12,8 @@ A stable and powerful zero-dependency **free** translator for [Microsoft Transla
 
 NPM
 
-```
-npm install microsoft-translate-api
-```
-
-Bun
-
-```
-bun add microsoft-translate-api
+```sh
+[npm | bun | pnpm | yarn] install microsoft-translate-api
 ```
 
 ### Basic Usage
@@ -184,14 +178,19 @@ interface TranslationResult {
 
 ### Supported Languages
 
-Refer to [lang.json](src/lang.json).
+Refer to [langs](src/lib/langs.ts).
 
 ### Service Limits
 
-<https://learn.microsoft.com/azure/ai-services/translator/service-limits#character-and-array-limits-per-request>
+[Character and array limits per request](https://learn.microsoft.com/azure/ai-services/translator/service-limits#character-and-array-limits-per-request)
+
+<br/>
 
 > [!NOTE]
 > Note that the correction service is not available.
+
+
+<br/>
 
 ### Use Paid Service With Your Private Keys
 
@@ -212,11 +211,13 @@ translate('你好，很高兴认识你！', null, 'en', {
 });
 ```
 
-See also <https://learn.microsoft.com/azure/ai-services/translator/reference/v3-0-reference#authentication>
+See also [Authentication](https://learn.microsoft.com/azure/ai-services/translator/reference/v3-0-reference#authentication)
 
 > [!NOTE]
 > Note that using your private keys, the translator will skip to fetch the free authorization and you will have to check if the authorization is expired by yourself.
 
-## Credits
+<br/>
+
+## Thanks
 >
-> [bing-translate-api](https://github.com/plainheart/bing-translate-api/) - This package literally would never exist without this.
+> [bing-translate-api](https://github.com/plainheart/bing-translate-api/)
