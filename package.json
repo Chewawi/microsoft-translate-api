@@ -11,7 +11,9 @@
   },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "unbuild",
     "prepare": "pnpm build",
@@ -41,9 +43,10 @@
   },
   "homepage": "https://github.com/Chewawi/microsoft-translate-api",
   "devDependencies": {
-    "@types/bun": "^1.1.2",
-    "@types/node": "^20.12.12",
-    "typescript": "^5.4.5",
-    "unbuild": "^2.0.0"
-  }
+    "@types/bun": "^1.1.16",
+    "@types/node": "^22.10.6",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
+  },
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
 }
