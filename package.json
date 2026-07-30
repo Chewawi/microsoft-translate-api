@@ -23,9 +23,7 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "node scripts/generate-langs.js && unbuild",
     "prepare": "node scripts/generate-langs.js && unbuild",
