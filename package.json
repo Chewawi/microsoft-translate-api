@@ -1,24 +1,39 @@
 {
   "name": "microsoft-translate-api",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A simple, powerful and free API for Microsoft Translator for Node.js",
   "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.17"
+  },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": ["dist"],
   "scripts": {
-    "build": "pnpm generate:langs && unbuild",
-    "prepare": "pnpm build",
-    "prepack": "pnpm build",
-    "generate:langs": "node scripts/generate-langs.js"
+    "build": "node scripts/generate-langs.js && unbuild",
+    "prepare": "node scripts/generate-langs.js && unbuild",
+    "prepack": "node scripts/generate-langs.js && unbuild",
+    "generate:langs": "node scripts/generate-langs.js",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit -p .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write ."
   },
   "repository": {
     "type": "git",
@@ -44,10 +59,11 @@
   },
   "homepage": "https://github.com/Chewawi/microsoft-translate-api",
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/bun": "^1.1.16",
     "@types/node": "^22.10.6",
     "typescript": "^5.7.3",
     "unbuild": "^3.3.1"
   },
-  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
+  "packageManager": "bun@1.3.14"
 }
