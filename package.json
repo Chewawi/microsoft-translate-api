@@ -1,6 +1,6 @@
 {
   "name": "microsoft-translate-api",
-  "version": "2.0.0",
+  "version": "1.1.0",
   "description": "A simple, powerful and free API for Microsoft Translator for Node.js",
   "type": "module",
   "sideEffects": false,
@@ -60,6 +60,7 @@
   "homepage": "https://github.com/Chewawi/microsoft-translate-api",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.31.1",
     "@types/bun": "^1.1.16",
     "@types/node": "^22.10.6",
     "typescript": "^5.7.3",
